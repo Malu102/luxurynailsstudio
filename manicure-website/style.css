@@ -1,0 +1,147 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  header {
+    background: #8902ffba;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+        font-family: 'Playfair Display', serif;  /* Fonte elegante */
+        font-weight: bold;  /* Negrito */
+        font-size: 2rem;  /* Tamanho de fonte ajustado */
+      }
+      
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin: 0 1rem;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #hero {
+    background: url('images/background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .cta {
+    background: #8902ffba;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  #about, #services, #gallery, #contact {
+    padding: 2rem;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+/* Carrossel - Imagens em fundo de tela */
+/* Seção Hero - Carrossel e Texto */
+#hero {
+    position: relative;
+    height: 100vh;  /* O carrossel ocupa toda a altura da tela */
+    overflow: hidden;
+  }
+  
+  /* Carrossel de imagens */
+  .hero-carousel {
+    display: flex;
+    width: 400%;  /* Total de 4 imagens, cada uma ocupando 25% */
+    animation: slide 16s infinite;  /* Animação de deslizar entre as imagens */
+  }
+  
+  .carousel-image {
+    width: 25%;  /* Cada imagem ocupa 25% da largura */
+    height: 100vh;  /* As imagens ocupam toda a altura da tela */
+    object-fit: cover;  /* Garante que as imagens cubram a área disponível */
+  }
+  
+  /* Animação para o carrossel */
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* Texto sobre o carrossel */
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;  /* Garante que o texto fique sobre as imagens */
+  
+    background-color: rgba(0, 0, 0, 0.5);  /* Fundo semi-transparente */
+    padding: 2rem;  /* Espaço interno ao redor do texto */
+    border-radius: 10px;  /* Bordas arredondadas */
+    width: 80%;  /* Ajuste a largura para cobrir o espaço desejado */
+    min-height: 200px;  /* Maior altura para o texto e o botão */
+    display: flex;
+    flex-direction: column;  /* Organiza o conteúdo em coluna */
+    justify-content: center;  /* Alinha o conteúdo verticalmente */
+    align-items: center;  /* Alinha o conteúdo horizontalmente */
+  }
+  
+  /* Botão */
+  .cta {
+    background: #8902ffba;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;  /* Espaço entre o texto e o botão */
+    display: inline-block;  /* Faz o botão ser tratado como um bloco em linha */
+  }
+  
+  
+  
